@@ -137,7 +137,45 @@ export const LatestOrders = (props) => (
               </TableCell>
             </TableRow>
           </TableHead>
-         
+         <TableBody>
+          {orders.map((order) => (
+              <TableRow
+                hover
+                key={order.id}
+              >
+         <TableCell>
+               {order.customer.name}
+              </TableCell>
+              <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell> <TableCell>
+               {order.customer.name}
+              </TableCell>
+              <TableCell>
+              <Button  color="primary">Active</Button>
+              /<Button color="danger">Inctive</Button>
+              </TableCell> 
+              <TableCell>
+               {order.customer.name}
+              </TableCell>
+              <TableCell>
+               {order.img}
+              </TableCell>
+              
+              </TableRow>))}
+         </TableBody>
         </Table>
       </Box>
     </PerfectScrollbar>
