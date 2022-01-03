@@ -6,7 +6,6 @@ import {
   Button,
   Card,
   CardHeader,
-  Modal,
   Table,
   TableBody,
   TableCell,
@@ -17,7 +16,7 @@ import {
 } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { SeverityPill } from '../severity-pill';
-import ModalExample from "src/components/dashboard/uploadmodel"
+
 const orders = [
   {
     id: uuid(),
@@ -83,61 +82,46 @@ const orders = [
 
 export const LatestOrders = (props) => (
   <Card {...props}>
-    <CardHeader title=" Agent details" />
+    <CardHeader title=" " />
     <PerfectScrollbar>
       <Box sx={{ minWidth: 800 }}>
         <Table>
           <TableHead>
             <TableRow>
               <TableCell>
-                Agent nane
+                servey
               </TableCell>
               <TableCell>
-                Agent code
-              </TableCell>
-              <TableCell sortDirection="desc">
-                <Tooltip
-                  enterDelay={300}
-                  title="Sort"
-                >
-                  <TableSortLabel
-                    active
-                    direction="desc"
-                  >
-                    langauge knowing
-                  </TableSortLabel>
-                </Tooltip>
+               Added date
               </TableCell>
               <TableCell>
-                total leads
+                Servey Result
               </TableCell>
               <TableCell>
-                calls
+               Active/Inactive
               </TableCell>
-              <TableCell>
-               follow up
-              </TableCell>
-              <TableCell>
-                reamaining
-              </TableCell>
-              <TableCell>
-               retry call
-              </TableCell>
-              <TableCell>
-                sales
-              </TableCell>
-              <TableCell>
-               stutus
-              </TableCell>
-              <TableCell>
-                details
-              </TableCell>
-              <TableCell>
-               < ModalExample />
-              </TableCell>
+              
             </TableRow>
           </TableHead>
-         
+          <TableBody>
+            {orders.map((order) => (
+              <TableRow
+                hover
+                key={order.id}
+              >
+                
+                
+                
+                <TableCell>
+                  {order.customer.name}
+                </TableCell>
+                <TableCell>
+                  {format(order.createdAt, 'dd/MM/yyyy')}
+                </TableCell>
+                
+              </TableRow>
+            ))}
+          </TableBody>
         </Table>
       </Box>
     </PerfectScrollbar>

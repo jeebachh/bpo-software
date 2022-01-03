@@ -1,24 +1,22 @@
 import Head from 'next/head';
 import { Box, Container, Grid } from '@mui/material';
-import { Budget } from '../components/dashboard/budget';
-import { LatestOrders } from '../components/dashboard/latest-orders';
+import { Budget } from 'src/components/4th page/dashboard/budget';
+import { LatestOrders } from '../components/4th page/dashboard/latest-orders';
 import { LatestProducts } from '../components/dashboard/latest-products';
 import { Sales } from '../components/dashboard/sales';
-import { TasksProgress } from '../components/dashboard/tasks-progress';
-import { TotalCustomers } from '../components/dashboard/total-customers';
-import { TotalProfit } from '../components/dashboard/total-profit';
+import { TasksProgress } from '../components/4th page/dashboard/tasks-progress';
+import { TotalCustomers } from '../components/4th page/dashboard/total-customers';
+import { TotalProfit } from '../components/4th page/dashboard/total-profit';
 import { TrafficByDevice } from '../components/dashboard/traffic-by-device';
 import { DashboardLayout } from '../components/dashboard-layout';
-import SearchBar from 'src/components/dashboard/search';
-import Show from 'src/components/dashboard/show';
-import Upload from 'src/components/dashboard/upload';
+import SearchBar from 'src/components/4th page/dashboard/search';
+import ShowCalendar from "src/components/4th page/Event"
 
-
-const Dashboard = () => (
+const Createservey1= () => (
   <>
     <Head>
       <title>
-       3rd Page
+        4th Page
       </title>
     </Head>
     <Box
@@ -45,6 +43,9 @@ const Dashboard = () => (
           >
             <SearchBar  />
           </Grid>
+          
+          
+          
           <Grid
             item
             lg={3}
@@ -93,17 +94,25 @@ const Dashboard = () => (
           >
             <LatestOrders />
           </Grid>
-          
+          <Grid
+            item
+            lg={12}
+            md={12}
+            xl={12}
+            xs={12}
+          >
+            <ShowCalendar />
+          </Grid>
         </Grid>
       </Container>
     </Box>
   </>
 );
 
-Dashboard.getLayout = (page) => (
+Createservey1.getLayout = (page) => (
   <DashboardLayout>
     {page}
   </DashboardLayout>
 );
 
-export default Dashboard;
+export default Createservey1;

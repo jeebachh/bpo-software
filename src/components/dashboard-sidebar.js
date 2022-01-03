@@ -23,20 +23,20 @@ const items = [
     title: 'Dashboard'
   },
   {
-    href: '/customers',
+    href: '/4th',
     icon: (<UsersIcon fontSize="small" />),
     title: 'Agents'
   },
   
   {
-    href: '/account',
+    href: '/5th',
     icon: (<UserIcon fontSize="small" />),
-    title: 'Account'
+    title: 'Create Servey'
   },
   {
     href: '/settings',
     icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
+    title: 'Create Question'
   },
   {
     href: '/login',
