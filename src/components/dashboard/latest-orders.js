@@ -89,10 +89,10 @@ export const LatestOrders = (props) => (
           <TableHead>
             <TableRow>
               <TableCell>
-                Agent Name
+               Name of Customer
               </TableCell>
               <TableCell>
-               Agent Phone Number
+               customer Phone Number
               </TableCell>
               
               
@@ -110,9 +110,7 @@ export const LatestOrders = (props) => (
                 <TableCell>
                   {order.customer.name}
                 </TableCell>
-                <TableCell>
-                  {format(order.createdAt, 'dd/MM/yyyy')}
-                </TableCell>
+                
                 
               </TableRow>
             ))}
