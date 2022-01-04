@@ -41,6 +41,7 @@ const orders = [
   {
     id: uuid(),
     ref: 'CDD1047',
+    phone:'9876543234',
     amount: 10.99,
     customer: {
       name: 'Alexa Richardson'
@@ -51,6 +52,7 @@ const orders = [
   {
     id: uuid(),
     ref: 'CDD1046',
+    phone:'9876543234',
     amount: 96.43,
     customer: {
       name: 'Anje Keizer'
@@ -71,6 +73,7 @@ const orders = [
   {
     id: uuid(),
     ref: 'CDD1044',
+    phone:'9876543234',
     amount: 16.76,
     customer: {
       name: 'Adam Denisov'
@@ -110,7 +113,9 @@ export const LatestOrders = (props) => (
                 <TableCell>
                   {order.customer.name}
                 </TableCell>
-                
+                  <TableCell>
+                  {order.customer.phone}
+                </TableCell>
                 
               </TableRow>
             ))}
